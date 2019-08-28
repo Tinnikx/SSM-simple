@@ -51,7 +51,7 @@ public class MyAspect {
     @Around("com.springmvc.demo.aop.basedonannotation.MyAspect.pointCutAfter()")
     public Object Around(ProceedingJoinPoint joinPoint) throws Throwable {
         System.out.println("-----------around before----------");
-        Object proceed = null;
+        Object proceed;
         try {
             proceed = joinPoint.proceed();
         } catch (Throwable throwable) {
